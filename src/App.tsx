@@ -120,16 +120,19 @@ function App() {
 
   // Filter features
   const filteredFeatures = features.filter(feature => {
-    if(!searchQuery){
-      const matchesCategory = selectedCategory === 'All' || feature.category === selectedCategory;
-      const matchesContinent = selectedContinent === 'All' || feature.continent === selectedContinent;
-    }
+    
+    const matchesCategory = selectedCategory === 'All' || feature.category === selectedCategory;
+    const matchesContinent = selectedContinent === 'All' || feature.continent === selectedContinent;
     const matchesSearch = searchQuery
       ? feature.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         feature.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
         feature.continent.toLowerCase().includes(searchQuery.toLowerCase())
       : true;
-    return matchesSearch;
+
+      if (searchQuery) {
+        return matchesSearch;
+      }
+      return matchesCategory && matchesContinent && matchesSearch;
   });
 
   // Autocomplete suggestions
