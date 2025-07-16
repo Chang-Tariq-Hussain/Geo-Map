@@ -13,6 +13,7 @@ import ThemeSelect from './components/ThemeSelect';
 import { LuListFilter } from "react-icons/lu";
 import logoImage from '../public/logo2.avif';
 import { SiFreelancermap } from 'react-icons/si';
+import './App.css'
 // Fix Leaflet marker icons
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -167,7 +168,7 @@ function App() {
   return (
     <div className="min-h-screen w-[100vw] bg-gray-100 text-white font-sans">
       {/* Header */}
-      <header className="bg-white text-black bg-opacity-90 p-2 flex items-center gap-2 shadow-lg">
+      <header className="header bg-white text-black bg-opacity-90 p-2 flex items-center gap-2 shadow-lg">
         <img src={logoImage} alt="" className='h-12 object-contain'/>
         <h1 className="text-xl font-md">SnapMap</h1>
         {/* Search Bar */}
@@ -204,7 +205,7 @@ function App() {
 
       <div className="flex flex-col lg:flex-row gap-3 py-2">
         {/* Sidebar */}
-        <div className={`lg:w-1/4 bg-white shadow shadow-gray-300 rounded-md bg-opacity-80 p-6 transition-all duration-300 ${isSidebarOpen ? 'lg:w-1/4 w-fit' : 'lg:w-16'}`}>
+        <div className={`sidebar lg:w-1/4 bg-white shadow shadow-gray-300 rounded-md bg-opacity-80 p-6 transition-all duration-300 ${isSidebarOpen ? 'lg:w-1/4 w-fit' : 'lg:w-16'}`}>
         <div className="flex items-center justify-between lg:mb-4">
             <h2 className={`text-lg font-semibold text-black ${isSidebarOpen ? 'block' : 'hidden'}`}>
               Explore the World

@@ -1,0 +1,12 @@
+
+.sidebar{
+    min-height:86vh;
+    position:sticky;
+    top:70px;
+}
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:10;
+}
