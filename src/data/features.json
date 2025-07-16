@@ -1,0 +1,903 @@
+[
+  {
+    "id": 1,
+    "continent": "Africa",
+    "category": "Rivers",
+    "name": "Nile River",
+    "coordinates": [30.0, 31.0],
+    "details": "The world’s longest river, stretching 6695 km from its source in Burundi to the Mediterranean Sea, the Nile has been the lifeblood of ancient and modern civilizations. It nurtured ancient Egypt, enabling agriculture, trade, and monumental architecture like the pyramids. The river flows through 11 countries, including Egypt, Sudan, and Uganda, and supports millions with irrigation and fishing. Its annual flooding historically enriched farmlands, though the Aswan High Dam now regulates flow, impacting ecosystems. The Nile Delta is a biodiversity hotspot but faces challenges from pollution and sea-level rise.",
+    "metrics": {
+      "length_km": 6695,
+      "discharge_m3_s": 2830
+    }
+  },
+  {
+    "id": 2,
+    "continent": "Africa",
+    "category": "Mountains",
+    "name": "Mount Kilimanjaro",
+    "coordinates": [-3.0674, 37.3556],
+    "details": "Africa’s highest peak at 5895 m, Mount Kilimanjaro is a dormant stratovolcano in Tanzania with three cones: Kibo, Mawenzi, and Shira. Its snow-capped summit, despite being near the equator, is a striking feature, though glaciers are rapidly retreating due to climate change. The mountain supports diverse ecosystems, from rainforest to alpine desert, hosting unique flora and fauna. It’s a popular trekking destination, with over 25,000 climbers annually, and holds cultural significance for local Chagga people. Its prominence inspired Ernest Hemingway’s 'The Snows of Kilimanjaro.'",
+    "metrics": {
+      "elevation_m": 5895
+    }
+  },
+  {
+    "id": 3,
+    "continent": "Africa",
+    "category": "Deserts",
+    "name": "Sahara Desert",
+    "coordinates": [23.4162, 25.6628],
+    "details": "The world’s largest hot desert, spanning 9.2 million km² across 11 North African countries, the Sahara is characterized by vast sand dunes, rocky plateaus, and rare oases. It stretches from the Atlantic Ocean to the Red Sea, with temperatures reaching 50°C. Home to nomadic Tuareg and Berber peoples, it supports sparse vegetation and wildlife like fennec foxes. The Sahara was once fertile, with ancient rock art depicting rivers and animals. Today, it faces desertification and is a key region for studying climate change and solar energy potential.",
+    "metrics": {
+      "area_km2": 9200000
+    }
+  },
+  {
+    "id": 4,
+    "continent": "Asia",
+    "category": "Mountains",
+    "name": "Mount Everest",
+    "coordinates": [27.9881, 86.9250],
+    "details": "The world’s highest peak at 8848 m, Mount Everest in the Himalayas straddles Nepal and China’s Tibet Autonomous Region. Formed by the collision of the Indian and Eurasian tectonic plates, it’s a global mountaineering icon, first summited in 1953 by Edmund Hillary and Tenzing Norgay. The climb is perilous, with risks of altitude sickness and avalanches, and over 300 deaths have been recorded. Sherpa communities play a vital role in expeditions. The mountain faces environmental challenges from climbing tourism, including litter and glacial retreat.",
+    "metrics": {
+      "elevation_m": 8848
+    }
+  },
+  {
+    "id": 5,
+    "continent": "Asia",
+    "category": "Rivers",
+    "name": "Yangtze River",
+    "coordinates": [31.2397, 121.4968],
+    "details": "Asia’s longest river at 6300 km, the Yangtze flows from the Tibetan Plateau to the East China Sea, passing through diverse landscapes and major cities like Chongqing and Shanghai. It supports over 400 million people through agriculture, fishing, and industry. The Three Gorges Dam, the world’s largest hydropower project, generates 22,500 MW but has caused ecological and cultural disruptions, displacing millions. The river is home to endangered species like the Chinese sturgeon and faces pollution challenges from industrialization.",
+    "metrics": {
+      "length_km": 6300,
+      "discharge_m3_s": 31900
+    }
+  },
+  {
+    "id": 6,
+    "continent": "Asia",
+    "category": "Deserts",
+    "name": "Gobi Desert",
+    "coordinates": [42.5, 105.0],
+    "details": "Spanning 1.3 million km² across Mongolia and northern China, the Gobi is a cold desert with extreme temperatures from -40°C to 45°C. Known for dinosaur fossil discoveries, including the first Velociraptor remains, it features vast steppes, gravel plains, and sand dunes. The desert supports nomadic herders and rare species like the Bactrian camel and snow leopard. Its Silk Road history connects it to ancient trade routes. Modern challenges include desertification and mining impacts, particularly for copper and gold.",
+    "metrics": {
+      "area_km2": 1300000
+    }
+  },
+  {
+    "id": 7,
+    "continent": "South America",
+    "category": "Rivers",
+    "name": "Amazon River",
+    "coordinates": [-2.1631, -55.1266],
+    "details": "The world’s largest river by volume, discharging 209000 m³/s, the Amazon flows 6575 km through Brazil, Peru, and Colombia, feeding the Amazon rainforest. It carries more water than the next seven largest rivers combined and supports unparalleled biodiversity, including piranhas, pink dolphins, and anacondas. Indigenous communities rely on it for fishing and transport. Deforestation and mining threaten its ecosystem, while its vast delta near Belém is a critical carbon sink facing climate change pressures.",
+    "metrics": {
+      "length_km": 6575,
+      "discharge_m3_s": 209000
+    }
+  },
+  {
+    "id": 8,
+    "continent": "South America",
+    "category": "Wetlands",
+    "name": "Pantanal",
+    "coordinates": [-18.0, -57.0],
+    "details": "The world’s largest tropical wetland, spanning 140000 km² across Brazil, Bolivia, and Paraguay, the Pantanal is a biodiversity hotspot hosting jaguars, caimans, capybaras, and over 600 bird species. Its seasonal flooding creates a unique mosaic of wetlands, forests, and grasslands, supporting ecotourism and cattle ranching. Indigenous groups like the Guató depend on its resources. Threats include deforestation, agriculture, and hydropower projects, which disrupt its delicate hydrological balance and wildlife habitats.",
+    "metrics": {
+      "area_km2": 140000
+    }
+  },
+  {
+    "id": 9,
+    "continent": "North America",
+    "category": "Lakes",
+    "name": "Lake Superior",
+    "coordinates": [47.0, -87.0],
+    "details": "The largest freshwater lake by surface area at 82100 km², Lake Superior borders the USA and Canada. Formed by glacial activity 10,000 years ago, it’s part of the Great Lakes system, holding 10% of the world’s surface freshwater. It supports shipping, fisheries, and tourism, with ports like Duluth and Thunder Bay. Native Ojibwe communities revere it culturally. The lake faces pollution from industrial runoff and invasive species like zebra mussels, impacting its clear waters.",
+    "metrics": {
+      "area_km2": 82100
+    }
+  },
+  {
+    "id": 10,
+    "continent": "North America",
+    "category": "Deserts",
+    "name": "Great Basin Desert",
+    "coordinates": [39.0, -114.0],
+    "details": "Spanning 492000 km² across Nevada, Utah, and parts of surrounding US states, the Great Basin is North America’s largest cold desert. Characterized by sagebrush ecosystems, salt flats, and mountain ranges, it includes the Great Salt Lake Desert. Native Paiute and Shoshone tribes have lived here for millennia. The region hosts unique species like the bristlecone pine, the world’s oldest tree species. Modern uses include military testing and renewable energy, but overgrazing and water diversion threaten its fragile environment.",
+    "metrics": {
+      "area_km2": 492000
+    }
+  },
+  {
+    "id": 11,
+    "continent": "Europe",
+    "category": "Mountains",
+    "name": "Mont Blanc",
+    "coordinates": [45.8326, 6.8652],
+    "details": "The highest peak in the Alps at 4807 m, Mont Blanc straddles France and Italy. Formed by tectonic uplift, it’s a premier destination for skiing, mountaineering, and alpinism, with Chamonix as a key base. First summited in 1786, it inspired the sport of mountaineering. The mountain’s glaciers, like Mer de Glace, are retreating due to climate change. It holds cultural significance in European literature and art, but faces challenges from overcrowding and environmental degradation.",
+    "metrics": {
+      "elevation_m": 4807
+    }
+  },
+  {
+    "id": 12,
+    "continent": "Europe",
+    "category": "Rivers",
+    "name": "Danube River",
+    "coordinates": [48.0, 16.0],
+    "details": "Europe’s second-longest river at 2850 km, the Danube flows through 10 countries, from Germany’s Black Forest to the Black Sea. It has been a vital trade route since Roman times, connecting cities like Vienna, Budapest, and Belgrade. The river supports diverse ecosystems, including the Danube Delta, a UNESCO Biosphere Reserve with over 300 bird species. Hydropower dams and pollution threaten its biodiversity, while cultural festivals and tourism highlight its historical role in European unity.",
+    "metrics": {
+      "length_km": 2850,
+      "discharge_m3_s": 7100
+    }
+  },
+  {
+    "id": 13,
+    "continent": "Australia",
+    "category": "Deserts",
+    "name": "Great Victoria Desert",
+    "coordinates": [-29.0, 129.0],
+    "details": "Spanning 348750 km² in Western and South Australia, the Great Victoria Desert is Australia’s largest desert, characterized by red sand dunes, salt lakes, and sparse shrubland. It supports Indigenous communities like the Pitjantjatjara, who have lived here for over 40,000 years, with sacred sites like Uluru nearby. Unique species like the thorny devil lizard thrive here. The desert’s isolation makes it ideal for astronomical research, but mining and climate change pose environmental risks.",
+    "metrics": {
+      "area_km2": 348750
+    }
+  },
+  {
+    "id": 14,
+    "continent": "Australia",
+    "category": "Dams",
+    "name": "Ord River Dam",
+    "coordinates": [-16.12, 128.74],
+    "details": "Located in Western Australia, the Ord River Dam creates Lake Argyle, Australia’s largest man-made lake, with a capacity of 100 MW. Built in the 1970s, it supports irrigation for agriculture in the Kimberley region, producing crops like rice and sandalwood. The dam has transformed the arid landscape, but altered local ecosystems, affecting native fish species. It’s a key infrastructure for remote communities and attracts tourism for fishing and boating, though water management remains a challenge.",
+    "metrics": {
+      "capacity_mw": 100
+    }
+  },
+  {
+    "id": 15,
+    "continent": "Antarctica",
+    "category": "Glaciers",
+    "name": "Lambert Glacier",
+    "coordinates": [-70.0, 70.0],
+    "details": "The world’s largest glacier, stretching 400 km and up to 80 km wide, Lambert Glacier flows into the Amery Ice Shelf in East Antarctica. It drains about 8% of the Antarctic ice sheet, playing a critical role in global sea level studies. Discovered during the 1950s, it’s a focal point for climate research, with ice cores revealing 100,000 years of environmental history. Its remote location limits human impact, but melting due to global warming is a growing concern.",
+    "metrics": {
+      "length_km": 400
+    }
+  },
+  {
+    "id": 16,
+    "continent": "Africa",
+    "category": "Wetlands",
+    "name": "Okavango Delta",
+    "coordinates": [-19.0, 22.0],
+    "details": "An inland delta in Botswana spanning 15000 km², the Okavango Delta is a UNESCO World Heritage site formed by the Okavango River’s seasonal flooding. It supports one of Africa’s densest wildlife populations, including elephants, lions, and hippos, and is a haven for over 400 bird species. Local communities like the San rely on it for fishing and tourism. Its unique ecosystem is threatened by upstream water diversion and climate change, impacting its seasonal flood cycles.",
+    "metrics": {
+      "area_km2": 15000
+    }
+  },
+  {
+    "id": 17,
+    "continent": "Asia",
+    "category": "Plateaus",
+    "name": "Tibetan Plateau",
+    "coordinates": [33.0, 88.0],
+    "details": "Known as the ‘Roof of the World,’ the Tibetan Plateau spans 2.5 million km² at an average elevation of 4500 m, making it the world’s highest and largest plateau. Formed by the collision of the Indian and Eurasian plates, it influences global climate patterns, including the Asian monsoon. Home to Tibetan Buddhist culture, it supports nomadic herders and rare species like the Tibetan antelope. Its glaciers feed major rivers like the Yangtze and Indus, but face melting due to climate change.",
+    "metrics": {
+      "area_km2": 2500000,
+      "elevation_m": 4500
+    }
+  },
+  {
+    "id": 18,
+    "continent": "South America",
+    "category": "Forests",
+    "name": "Amazon Rainforest",
+    "coordinates": [-3.0, -60.0],
+    "details": "The world’s largest rainforest, spanning 5.5 million km² across nine South American countries, the Amazon hosts 100 tree species per acre and millions of species, including jaguars, sloths, and piranhas. It produces 20% of the world’s oxygen and acts as a critical carbon sink. Indigenous tribes like the Yanomami rely on it for survival. Deforestation for agriculture and mining, at a rate of 11000 km² annually, threatens its biodiversity and global climate stability.",
+    "metrics": {
+      "area_km2": 5500000
+    }
+  },
+  {
+    "id": 19,
+    "continent": "North America",
+    "category": "Passes",
+    "name": "Donner Pass",
+    "coordinates": [39.3167, -120.3167],
+    "details": "A 2151 m mountain pass in California’s Sierra Nevada, Donner Pass was a critical route during the 19th-century westward migration, notably for the tragic Donner Party of 1846, where many perished due to harsh winter conditions. Today, it’s a key transportation corridor via Interstate 80, supporting trade and tourism. The pass offers stunning views and skiing opportunities, but heavy snowfall poses challenges. Its historical significance is preserved in nearby monuments and museums.",
+    "metrics": {
+      "elevation_m": 2151
+    }
+  },
+  {
+    "id": 20,
+    "continent": "Africa",
+    "category": "Lakes",
+    "name": "Lake Victoria",
+    "coordinates": [-1.0, 33.0],
+    "details": "Africa’s largest lake by surface area at 68800 km², Lake Victoria borders Tanzania, Uganda, and Kenya. Named after Queen Victoria, it’s the source of the Nile River and supports millions through fishing, with tilapia and Nile perch as key species. The lake is central to the East African economy and culture, but faces overfishing, pollution, and invasive water hyacinth. Its shallow depth makes it vulnerable to climate change, impacting local communities and biodiversity.",
+    "metrics": {
+      "area_km2": 68800
+    }
+  },
+  {
+    "id": 21,
+    "continent": "Asia",
+    "category": "Mountains",
+    "name": "K2",
+    "coordinates": [35.8825, 76.5133],
+    "details": "The world’s second-highest peak at 8611 m, K2 in the Karakoram Range straddles Pakistan and China. Known as the ‘Savage Mountain,’ it’s one of the deadliest peaks, with a 25% fatality rate among climbers. First summited in 1954 by an Italian team, it’s a formidable challenge due to extreme weather and steep slopes. Local Balti porters support expeditions. Glacial retreat and climbing debris are environmental concerns, highlighting the impact of mountaineering tourism.",
+    "metrics": {
+      "elevation_m": 8611
+    }
+  },
+  {
+    "id": 22,
+    "continent": "Asia",
+    "category": "Mountains",
+    "name": "Kangchenjunga",
+    "coordinates": [27.7025, 88.1467],
+    "details": "The third-highest peak at 8586 m, Kangchenjunga in the Himalayas lies on the India-Nepal border. Revered as a sacred mountain by Sikkimese and Sherpa communities, it was first summited in 1955. Its five peaks, known as the ‘Five Treasures of Snow,’ are surrounded by dense forests and glaciers. The mountain supports unique biodiversity, including red pandas. Climbing is less frequent than Everest, preserving its pristine environment, though climate change threatens its glaciers.",
+    "metrics": {
+      "elevation_m": 8586
+    }
+  },
+  {
+    "id": 23,
+    "continent": "Asia",
+    "category": "Mountains",
+    "name": "Lhotse",
+    "coordinates": [27.9617, 86.9333],
+    "details": "The fourth-highest peak at 8516 m, Lhotse is part of the Everest massif in Nepal and China, connected by the South Col. Its steep south face is one of the most challenging climbs, first summited in 1956. Sherpa communities play a key role in expeditions, and the mountain’s glaciers feed the Imja River. Environmental concerns include glacial retreat and climbing waste, with efforts underway to preserve its delicate Himalayan ecosystem.",
+    "metrics": {
+      "elevation_m": 8516
+    }
+  },
+  {
+    "id": 24,
+    "continent": "Asia",
+    "category": "Mountains",
+    "name": "Makalu",
+    "coordinates": [27.8897, 87.0888],
+    "details": "The fifth-highest peak at 8485 m, Makalu in the Himalayas, near Nepal and China, is known for its striking pyramid shape. First summited in 1955 by a French team, it’s a challenging climb due to its isolation and harsh weather. The surrounding Makalu-Barun National Park hosts rare species like snow leopards. The mountain’s glaciers are critical water sources, but warming temperatures threaten their stability, impacting local water security.",
+    "metrics": {
+      "elevation_m": 8485
+    }
+  },
+  {
+    "id": 25,
+    "continent": "Asia",
+    "category": "Mountains",
+    "name": "Cho Oyu",
+    "coordinates": [28.0942, 86.6608],
+    "details": "The sixth-highest peak at 8188 m, Cho Oyu in the Himalayas lies on the Nepal-China border. Considered one of the more accessible 8000-meter peaks, it was first summited in 1954. Its proximity to Everest makes it a training ground for climbers, with Sherpa support critical to expeditions. The mountain’s glaciers feed regional rivers, but are retreating rapidly. Its name, meaning ‘Turquoise Goddess’ in Tibetan, reflects its cultural significance in local Buddhist traditions.",
+    "metrics": {
+      "elevation_m": 8188
+    }
+  },
+  {
+    "id": 26,
+    "continent": "Africa",
+    "category": "Rivers",
+    "name": "Congo River",
+    "coordinates": [-4.3167, 15.3167],
+    "details": "Africa’s second-longest river at 4700 km, the Congo flows through the Congo Basin, the world’s second-largest rainforest. It has the highest discharge in Africa at 41200 m³/s, supporting hydropower, with the Inga Dams generating significant energy. The river is a lifeline for fishing and transport in the Democratic Republic of Congo and other nations. Its biodiversity includes unique fish species, but deforestation, mining, and pollution threaten its ecosystem and indigenous communities like the Bantu.",
+    "metrics": {
+      "length_km": 4700,
+      "discharge_m3_s": 41200
+    }
+  },
+  {
+    "id": 27,
+    "continent": "Africa",
+    "category": "Rivers",
+    "name": "Zambezi River",
+    "coordinates": [-16.0, 25.0],
+    "details": "Flowing 2574 km from Zambia to the Indian Ocean, the Zambezi is famous for Victoria Falls, one of the world’s largest waterfalls. It powers the Kariba Dam, a major hydropower source for Zambia and Zimbabwe. The river supports diverse wildlife, including hippos and crocodiles, and is central to local tourism. Indigenous Tonga communities rely on it for fishing. Challenges include dam-related ecological disruptions and seasonal flooding, exacerbated by climate change.",
+    "metrics": {
+      "length_km": 2574,
+      "discharge_m3_s": 3400
+    }
+  },
+  {
+    "id": 28,
+    "continent": "Africa",
+    "category": "Rivers",
+    "name": "Niger River",
+    "coordinates": [13.0, 2.0],
+    "details": "Flowing 4180 km through West Africa, the Niger River supports agriculture and fisheries in Mali, Niger, and Nigeria. Its inland delta in Mali is a UNESCO World Heritage site, hosting millions of migratory birds. Historically, it facilitated trade for empires like Mali and Songhai. The Niger Delta, a major oil-producing region, faces pollution and conflict. Seasonal flooding supports rice farming but is increasingly unpredictable due to climate change, affecting millions of livelihoods.",
+    "metrics": {
+      "length_km": 4180,
+      "discharge_m3_s": 5600
+    }
+  },
+  {
+    "id": 29,
+    "continent": "Asia",
+    "category": "Rivers",
+    "name": "Mekong River",
+    "coordinates": [16.0, 106.0],
+    "details": "Flowing 4350 km from the Tibetan Plateau to the South China Sea, the Mekong crosses six countries, including China, Laos, and Vietnam. It supports the world’s largest inland fishery, providing food security for 60 million people. The river’s delta in Vietnam is a global rice basket. Dams, like those in Laos, generate hydropower but disrupt fish migration and sediment flow, threatening agriculture. The Mekong’s cultural significance includes festivals like Cambodia’s Water Festival.",
+    "metrics": {
+      "length_km": 4350,
+      "discharge_m3_s": 16000
+    }
+  },
+  {
+    "id": 30,
+    "continent": "Asia",
+    "category": "Rivers",
+    "name": "Ganges River",
+    "coordinates": [25.0, 83.0],
+    "details": "Sacred in Hinduism, the Ganges flows 2525 km through India and Bangladesh, supporting 400 million people with agriculture and fishing. Originating in the Himalayas, it’s revered as ‘Mother Ganga,’ with pilgrimage sites like Varanasi. The river faces severe pollution from industrial waste and sewage, impacting water quality and health. Its fertile plains support rice and wheat farming. Conservation efforts, like the Namami Gange project, aim to restore its ecological and cultural vitality.",
+    "metrics": {
+      "length_km": 2525,
+      "discharge_m3_s": 18700
+    }
+  },
+  {
+    "id": 31,
+    "continent": "Asia",
+    "category": "Rivers",
+    "name": "Indus River",
+    "coordinates": [24.0, 67.0],
+    "details": "Flowing 3180 km from the Tibetan Plateau to the Arabian Sea, the Indus is vital for Pakistan’s agriculture, irrigating 80% of its farmland. It nurtured the ancient Indus Valley Civilization, with sites like Mohenjo-Daro. The river supports fisheries and hydropower, but water disputes with India over dams like Baglihar create tensions. Its delta is a biodiversity hotspot, though reduced flow from upstream diversions threatens ecosystems and livelihoods of Sindhi communities.",
+    "metrics": {
+      "length_km": 3180,
+      "discharge_m3_s": 6600
+    }
+  },
+  {
+    "id": 32,
+    "continent": "South America",
+    "category": "Rivers",
+    "name": "Paraná River",
+    "coordinates": [-27.0, -58.0],
+    "details": "South America’s second-longest river at 4880 km, the Paraná flows through Brazil, Paraguay, and Argentina, forming the Río de la Plata estuary. It supports hydropower via Itaipu Dam, one of the world’s largest, and facilitates trade through navigable waterways. The river’s wetlands, like the Iberá, host capybaras and caimans. Indigenous Guaraní communities depend on it. Deforestation and dam construction threaten its biodiversity and water quality, impacting regional ecosystems.",
+    "metrics": {
+      "length_km": 4880,
+      "discharge_m3_s": 18000
+    }
+  },
+  {
+    "id": 33,
+    "continent": "South America",
+    "category": "Rivers",
+    "name": "Orinoco River",
+    "coordinates": [8.0, -62.0],
+    "details": "Flowing 2140 km through Venezuela and Colombia, the Orinoco is known for its vast delta, a biodiversity hotspot with over 1000 fish species, including piranhas. It supports indigenous Warao communities, who navigate its waterways in canoes. The river’s basin includes savannas and rainforests, and it’s a key route for oil transport. Seasonal flooding enriches soils but is increasingly erratic due to climate change, affecting agriculture and wildlife.",
+    "metrics": {
+      "length_km": 2140,
+      "discharge_m3_s": 33000
+    }
+  },
+  {
+    "id": 34,
+    "continent": "South America",
+    "category": "Rivers",
+    "name": "Madeira River",
+    "coordinates": [-9.0, -64.0],
+    "details": "A major Amazon tributary, the Madeira flows 3250 km through Bolivia and Brazil, contributing 15% of the Amazon’s water volume. It supports diverse ecosystems, including river dolphins, and is a vital transport route for soy and timber. Indigenous groups like the Mura rely on its fisheries. Controversial dams, like Santo Antônio, generate hydropower but disrupt sediment flow and fish migration, threatening the river’s ecological balance and local livelihoods.",
+    "metrics": {
+      "length_km": 3250,
+      "discharge_m3_s": 31200
+    }
+  },
+  {
+    "id": 35,
+    "continent": "North America",
+    "category": "Rivers",
+    "name": "Mississippi River",
+    "coordinates": [38.0, -90.0],
+    "details": "Flowing 3730 km from Minnesota to the Gulf of Mexico, the Mississippi is North America’s second-longest river and a major trade artery, transporting grain and oil. Its vast basin spans 31 US states, supporting agriculture and industry. Native American tribes like the Choctaw historically depended on it. The river’s delta in Louisiana is a critical wetland, but faces erosion from sea-level rise and levees, while pollution from fertilizers causes Gulf dead zones.",
+    "metrics": {
+      "length_km": 3730,
+      "discharge_m3_s": 16700
+    }
+  },
+  {
+    "id": 36,
+    "continent": "North America",
+    "category": "Rivers",
+    "name": "Mackenzie River",
+    "coordinates": [65.0, -133.0],
+    "details": "Canada’s longest river at 1738 km, the Mackenzie flows from the Great Slave Lake to the Arctic Ocean, draining a vast northern basin. It supports indigenous Dene and Inuvialuit communities through fishing and transport. The river’s delta is a breeding ground for migratory birds and beluga whales. Historically used for fur trading, it now faces challenges from oil and gas exploration and climate-driven permafrost thaw, which alters its flow and ecosystems.",
+    "metrics": {
+      "length_km": 1738,
+      "discharge_m3_s": 9700
+    }
+  },
+  {
+    "id": 37,
+    "continent": "North America",
+    "category": "Rivers",
+    "name": "Yukon River",
+    "coordinates": [64.0, -141.0],
+    "details": "Flowing 3185 km through Canada and Alaska, the Yukon was central to the Klondike Gold Rush of 1896, attracting thousands of prospectors. It supports salmon fisheries critical to indigenous Athabascan communities and ecosystems. The river’s pristine waters flow through boreal forests and tundra, but mining and climate change, including permafrost melt, threaten its clarity and salmon runs. Its remote course makes it a prime destination for wilderness tourism.",
+    "metrics": {
+      "length_km": 3185,
+      "discharge_m3_s": 6400
+    }
+  },
+  {
+    "id": 38,
+    "continent": "Europe",
+    "category": "Rivers",
+    "name": "Volga River",
+    "coordinates": [56.0, 46.0],
+    "details": "Europe’s longest river at 3530 km, the Volga flows through Russia, connecting Moscow to the Caspian Sea. A key trade and transport route since medieval times, it supported the Volga Bulgars and Russian principalities. Its dams generate significant hydropower, but have altered ecosystems, reducing fish populations like sturgeon. The river’s cultural significance is celebrated in Russian literature and music, though industrial pollution remains a major challenge.",
+    "metrics": {
+      "length_km": 3530,
+      "discharge_m3_s": 8060
+    }
+  },
+  {
+    "id": 39,
+    "continent": "Europe",
+    "category": "Rivers",
+    "name": "Rhine River",
+    "coordinates": [51.0, 6.0],
+    "details": "Flowing 1233 km from the Swiss Alps to the North Sea, the Rhine is a vital trade route connecting Germany, Netherlands, and other nations. It has shaped European history, from Roman fortifications to medieval castles along its banks. The river supports vineyards and industries, with ports like Rotterdam. Its clean-up efforts since the 1980s have restored fish populations, but flooding and chemical spills remain risks, especially with climate-driven water level changes.",
+    "metrics": {
+      "length_km": 1233,
+      "discharge_m3_s": 2200
+    }
+  },
+  {
+    "id": 40,
+    "continent": "Europe",
+    "category": "Rivers",
+    "name": "Thames River",
+    "coordinates": [51.5, -0.1],
+    "details": "Flowing 346 km through southern England, the Thames is central to London’s history, from Roman trade to modern finance. It supported the growth of the British Empire through its port and shipbuilding. Iconic landmarks like the Tower Bridge span its banks. The river hosts diverse wildlife, including seals, but faces pollution from urban runoff. Its tidal nature and annual regattas, like the Oxford-Cambridge Boat Race, make it a cultural and recreational hub.",
+    "metrics": {
+      "length_km": 346,
+      "discharge_m3_s": 65
+    }
+  },
+  {
+    "id": 41,
+    "continent": "Australia",
+    "category": "Rivers",
+    "name": "Murray River",
+    "coordinates": [-35.0, 139.0],
+    "details": "Australia’s longest river at 2508 km, the Murray flows through southeastern Australia, forming part of the Murray-Darling Basin. It irrigates 1.5 million hectares of farmland, supporting crops like grapes and citrus. Indigenous Ngarrindjeri communities have cultural ties to the river, used for millennia. Over-extraction and drought, worsened by climate change, have reduced flows, threatening wetlands and species like the Murray cod. Conservation efforts aim to balance agricultural and ecological needs.",
+    "metrics": {
+      "length_km": 2508,
+      "discharge_m3_s": 767
+    }
+  },
+  {
+    "id": 42,
+    "continent": "Australia",
+    "category": "Rivers",
+    "name": "Darling River",
+    "coordinates": [-32.0, 146.0],
+    "details": "Flowing 1472 km through New South Wales, the Darling is a key tributary of the Murray-Darling Basin, vital for irrigation in Australia’s arid interior. It supports cotton and livestock farming, but severe droughts have caused intermittent drying, impacting indigenous communities like the Barkindji. The river’s ecosystem includes unique fish species, but over-extraction and algal blooms threaten its health. Cultural stories and rock art along its banks highlight its ancient significance.",
+    "metrics": {
+      "length_km": 1472,
+      "discharge_m3_s": 100
+    }
+  },
+  {
+    "id": 43,
+    "continent": "Asia",
+    "category": "Rivers",
+    "name": "Brahmaputra River",
+    "coordinates": [26.0, 90.0],
+    "details": "Flowing 2900 km from the Himalayas to the Bay of Bengal, the Brahmaputra is a lifeline for India and Bangladesh, supporting rice farming and fisheries. Known for its massive floods, it shapes fertile floodplains but causes displacement. The river’s upper reaches in Tibet are sacred to Buddhists. Hydropower projects in China and India spark regional tensions, while sediment-rich waters create dynamic islands in its delta, home to rare species like the Gangetic dolphin.",
+    "metrics": {
+      "length_km": 2900,
+      "discharge_m3_s": 19300
+    }
+  },
+  {
+    "id": 44,
+    "continent": "Africa",
+    "category": "Rivers",
+    "name": "Limpopo River",
+    "coordinates": [-25.0, 33.0],
+    "details": "Flowing 1750 km through South Africa, Zimbabwe, and Mozambique, the Limpopo forms a natural border and supports agriculture in arid regions. Known as the ‘Crocodile River’ for its wildlife, it’s central to local folklore and Rudyard Kipling’s stories. The river’s seasonal flow supports elephants and other species, but droughts and upstream dams reduce water availability, impacting farming communities and ecosystems in the Limpopo Delta.",
+    "metrics": {
+      "length_km": 1750,
+      "discharge_m3_s": 170
+    }
+  },
+  {
+    "id": 45,
+    "continent": "South America",
+    "category": "Rivers",
+    "name": "São Francisco River",
+    "coordinates": [-15.0, -43.0],
+    "details": "Brazil’s ‘river of national integration,’ the São Francisco flows 2914 km through five states, connecting arid interior to the Atlantic. It supports hydropower, irrigation, and fishing, sustaining millions in Brazil’s northeast. Indigenous tribes like the Truká rely on its waters. Dams and water transfers have boosted agriculture but disrupted ecosystems, reducing fish stocks. Cultural festivals celebrate its role, though pollution and deforestation challenge its sustainability.",
+    "metrics": {
+      "length_km": 2914,
+      "discharge_m3_s": 2900
+    }
+  },
+  {
+    "id": 46,
+    "continent": "Asia",
+    "category": "Lakes",
+    "name": "Caspian Sea",
+    "coordinates": [42.0, 50.0],
+    "details": "The world’s largest lake by surface area at 371000 km², the Caspian Sea is a saline lake bordered by Russia, Kazakhstan, Turkmenistan, Iran, and Azerbaijan. It’s a remnant of the ancient Paratethys Sea, rich in oil and gas reserves, driving economic activity. The lake supports sturgeon fisheries, source of 90% of the world’s caviar, but overfishing and pollution threaten species. Geopolitical disputes over its status as a sea or lake affect resource management.",
+    "metrics": {
+      "area_km2": 371000,
+      "depth_m": 1025,
+      "volume_km3": 78200
+    }
+  },
+  {
+    "id": 47,
+    "continent": "Asia",
+    "category": "Lakes",
+    "name": "Lake Baikal",
+    "coordinates": [53.0, 108.0],
+    "details": "The world’s deepest lake at 1642 m, Lake Baikal in Siberia, Russia, holds 20% of global freshwater, more than all Great Lakes combined. Formed 25 million years ago, it’s the oldest lake, with unique species like the Baikal seal and nerpa. A UNESCO World Heritage site, it supports indigenous Buryat communities. Pollution from industry and tourism, plus climate-driven changes, threaten its pristine waters, prompting global conservation efforts.",
+    "metrics": {
+      "area_km2": 31722,
+      "depth_m": 1642,
+      "volume_km3": 23615
+    }
+  },
+  {
+    "id": 48,
+    "continent": "Africa",
+    "category": "Lakes",
+    "name": "Lake Tanganyika",
+    "coordinates": [-6.0, 29.5],
+    "details": "The world’s second-deepest lake at 1470 m, Lake Tanganyika spans 32600 km² across Burundi, Tanzania, Zambia, and the DRC. Formed by tectonic rifting, it’s one of the oldest lakes, hosting over 250 cichlid fish species, 98% endemic. It supports fisheries for millions and was explored by 19th-century adventurers like Livingstone. Overfishing, sedimentation, and warming waters threaten its biodiversity, impacting local communities dependent on the lake.",
+    "metrics": {
+      "area_km2": 32600,
+      "depth_m": 1470,
+      "volume_km3": 18900
+    }
+  },
+  {
+    "id": 49,
+    "continent": "Africa",
+    "category": "Lakes",
+    "name": "Lake Malawi",
+    "coordinates": [-12.0, 34.0],
+    "details": "Africa’s third-largest lake at 29485 km², Lake Malawi borders Malawi, Mozambique, and Tanzania. Known for its biodiversity, it hosts over 1000 cichlid fish species, making it a global evolutionary hotspot. A UNESCO World Heritage site, it supports fishing and tourism, vital for local economies. The lake’s clear waters attract divers, but overfishing and invasive species threaten its ecosystem. Its rift valley origin links it to the East African Rift system.",
+    "metrics": {
+      "area_km2": 29485,
+      "depth_m": 706,
+      "volume_km3": 8400
+    }
+  },
+  {
+    "id": 50,
+    "continent": "North America",
+    "category": "Lakes",
+    "name": "Lake Michigan",
+    "coordinates": [43.0, -87.0],
+    "details": "One of the Great Lakes, Lake Michigan spans 58000 km² entirely in the USA, bordering Michigan, Wisconsin, Illinois, and Indiana. Formed by glaciers, it supports major ports like Chicago, driving trade and industry. Its sandy beaches and dunes attract millions of tourists. Native Potawatomi communities have cultural ties to the lake. Invasive species like Asian carp and industrial pollution challenge its ecosystem, with restoration efforts ongoing to protect water quality.",
+    "metrics": {
+      "area_km2": 58000,
+      "depth_m": 281,
+      "volume_km3": 4900
+    }
+  },
+  {
+    "id": 51,
+    "continent": "North America",
+    "category": "Lakes",
+    "name": "Lake Huron",
+    "coordinates": [44.0, -82.0],
+    "details": "The second-largest Great Lake at 59500 km², Lake Huron borders the USA and Canada, with over 30000 islands, including Manitoulin, the world’s largest lake island. Its clear waters support fishing and tourism, with historic lighthouses dotting its shores. Native Anishinaabe communities revere it. The lake’s role in shipping is vital, but invasive species and chemical pollutants threaten its health, prompting cross-border conservation initiatives.",
+    "metrics": {
+      "area_km2": 59500,
+      "depth_m": 229,
+      "volume_km3": 3540
+    }
+  },
+  {
+    "id": 52,
+    "continent": "South America",
+    "category": "Lakes",
+    "name": "Lake Titicaca",
+    "coordinates": [-15.5, -69.0],
+    "details": "The world’s highest navigable lake at 3812 m, Lake Titicaca spans 8372 km² on the Peru-Bolivia border. Sacred to the Inca, it’s home to the Uros people, who live on floating reed islands. The lake supports unique species like the Titicaca water frog. Its fisheries and tourism are economic pillars, but pollution from mining and climate-driven water level drops threaten its ecosystem and indigenous livelihoods.",
+    "metrics": {
+      "area_km2": 8372,
+      "depth_m": 281,
+      "volume_km3": 893
+    }
+  },
+  {
+    "id": 53,
+    "continent": "South America",
+    "category": "Lakes",
+    "name": "Lake Maracaibo",
+    "coordinates": [9.5, -71.5],
+    "details": "South America’s largest lake at 13210 km², Lake Maracaibo in Venezuela is connected to the Caribbean Sea, functioning as a brackish lagoon. Known as the ‘Lightning Capital of the World’ due to frequent storms, it’s a major oil-producing region, with offshore rigs. The lake supports fishing and indigenous Wayuu communities. Oil spills and eutrophication threaten its ecosystem, impacting biodiversity and local economies.",
+    "metrics": {
+      "area_km2": 13210,
+      "depth_m": 60,
+      "volume_km3": 280
+    }
+  },
+  {
+    "id": 54,
+    "continent": "Europe",
+    "category": "Lakes",
+    "name": "Lake Ladoga",
+    "coordinates": [61.0, 31.0],
+    "details": "Europe’s largest lake at 17700 km², Lake Ladoga in Russia was a vital supply route during the WWII Siege of Leningrad. Formed by glacial activity, it supports fishing and shipping, with historic monasteries on its islands. The lake hosts unique species like the Ladoga seal. Pollution from industry and agriculture, plus invasive species, threaten its ecosystem, prompting restoration efforts to preserve its cultural and ecological significance.",
+    "metrics": {
+      "area_km2": 17700,
+      "depth_m": 230,
+      "volume_km3": 908
+    }
+  },
+  {
+    "id": 55,
+    "continent": "Europe",
+    "category": "Lakes",
+    "name": "Lake Onega",
+    "coordinates": [61.5, 35.5],
+    "details": "Europe’s second-largest lake at 9700 km², Lake Onega in Russia is known for its clear waters and over 1500 islands, including Kizhi, a UNESCO site with historic wooden churches. Formed by glaciers, it supports fishing and tourism. The lake’s ecosystem includes unique fish species, but industrial pollution from nearby cities threatens water quality. Its role in Russian folklore and history underscores its cultural importance.",
+    "metrics": {
+      "area_km2": 9700,
+      "depth_m": 127,
+      "volume_km3": 295
+    }
+  },
+  {
+    "id": 56,
+    "continent": "Australia",
+    "category": "Lakes",
+    "name": "Lake Eyre",
+    "coordinates": [-28.0, 137.0],
+    "details": "Australia’s largest lake at 9500 km² when full, Lake Eyre is an ephemeral salt lake in the arid outback, filling only during rare floods. Known as Kati Thanda by indigenous Arabana people, it’s a sacred site with ancient cultural significance. When flooded, it attracts thousands of waterbirds, boosting biodiversity. Its remote location supports astronomical research, but climate change affects its rare flooding cycles, impacting ecosystems and tourism.",
+    "metrics": {
+      "area_km2": 9500,
+      "depth_m": 15,
+      "volume_km3": 30
+    }
+  },
+  {
+    "id": 57,
+    "continent": "North America",
+    "category": "Lakes",
+    "name": "Great Bear Lake",
+    "coordinates": [66.0, -121.0],
+    "details": "The largest lake entirely in Canada at 31000 km², Great Bear Lake lies in the Northwest Territories, near the Arctic Circle. Its pristine waters support indigenous Sahtu Dene communities and rare fish species like lake trout. Formed by glacial scouring, it’s a key site for uranium mining history. The lake’s remote location preserves its clarity, but climate change and potential mining pollution pose risks to its delicate Arctic ecosystem.",
+    "metrics": {
+      "area_km2": 31000,
+      "depth_m": 446,
+      "volume_km3": 2236
+    }
+  },
+  {
+    "id": 58,
+    "continent": "North America",
+    "category": "Lakes",
+    "name": "Great Slave Lake",
+    "coordinates": [62.0, -114.0],
+    "details": "North America’s deepest lake at 614 m, Great Slave Lake spans 27000 km² in Canada’s Northwest Territories. Named after the Slavey people, it supports indigenous fishing and transport. Its waters flow into the Mackenzie River, linking to the Arctic Ocean. The lake’s frozen surface is a winter road, vital for remote communities. Climate-driven ice melt and mining pollution threaten its ecosystem, impacting species like whitefish.",
+    "metrics": {
+      "area_km2": 27000,
+      "depth_m": 614,
+      "volume_km3": 1580
+    }
+  },
+  {
+    "id": 59,
+    "continent": "Asia",
+    "category": "Lakes",
+    "name": "Aral Sea",
+    "coordinates": [45.0, 60.0],
+    "details": "Once the world’s fourth-largest lake, the Aral Sea has shrunk to 17000 km² due to Soviet-era irrigation diverting its rivers. Spanning Kazakhstan and Uzbekistan, its decline created the Aralkum Desert, causing ecological and economic devastation. Former fishing communities now face dust storms and health issues. Restoration efforts, like Kazakhstan’s Kokaral Dam, have partially revived the North Aral, but the South Aral remains nearly dry, a stark lesson in human environmental impact.",
+    "metrics": {
+      "area_km2": 17000,
+      "depth_m": 42,
+      "volume_km3": 100
+    }
+  },
+  {
+    "id": 60,
+    "continent": "Africa",
+    "category": "Lakes",
+    "name": "Lake Volta",
+    "coordinates": [7.0, 0.0],
+    "details": "The world’s largest man-made lake by surface area at 8500 km², Lake Volta in Ghana was created by the Akosombo Dam in 1965 for hydropower, generating 1180 MW. It supports fishing and irrigation, boosting Ghana’s economy, but displaced 80000 people during its creation. The lake hosts unique species like the Volta clam. Sedimentation and aquatic weeds threaten its longevity, while climate change affects water levels, impacting local communities.",
+    "metrics": {
+      "area_km2": 8500,
+      "depth_m": 75,
+      "volume_km3": 148
+    }
+  },
+  {
+    "id": 61,
+    "continent": "Antarctica",
+    "category": "Glaciers",
+    "name": "Beardmore Glacier",
+    "coordinates": [-83.5, 171.0],
+    "details": "A major Antarctic glacier flowing 200 km from the Queen Maud Mountains to the Ross Ice Shelf, Beardmore is one of the largest valley glaciers. Discovered by Ernest Shackleton in 1908, it was a key route during early Antarctic expeditions. Its ice, up to 1500 m thick, holds climate records spanning millennia. The glacier’s flow influences global sea levels, and its remote location makes it a critical site for studying ice dynamics and global warming impacts.",
+    "metrics": {
+      "length_km": 200,
+      "thickness_m": 1500
+    }
+  },
+  {
+    "id": 62,
+    "continent": "South America",
+    "category": "Glaciers",
+    "name": "Perito Moreno Glacier",
+    "coordinates": [-50.5, -73.0],
+    "details": "An iconic glacier in Argentina’s Los Glaciares National Park, Perito Moreno spans 30 km and is one of the few advancing glaciers globally. Its dramatic calving into Lake Argentino attracts thousands of tourists. The glacier’s 170 m thick ice supports scientific research on glacial dynamics. Named after explorer Francisco Moreno, it’s a UNESCO World Heritage site. Climate change and tourism pressures challenge its stability, though its advance creates natural ice dams, causing periodic floods.",
+    "metrics": {
+      "length_km": 30,
+      "thickness_m": 170
+    }
+  },
+  {
+    "id": 63,
+    "continent": "Europe",
+    "category": "Glaciers",
+    "name": "Aletsch Glacier",
+    "coordinates": [46.5, 8.0],
+    "details": "The largest glacier in the Alps at 23 km, Aletsch in Switzerland is a UNESCO World Heritage site within the Jungfrau-Aletsch region. Its 900 m thick ice feeds the Rhône River, and its retreat since the 19th century is a key indicator of climate change. The glacier’s stunning ice caves and surrounding peaks attract hikers and skiers. Its ice cores provide 10000 years of climate data, aiding global warming studies, while local communities promote sustainable tourism.",
+    "metrics": {
+      "length_km": 23,
+      "thickness_m": 900
+    }
+  },
+  {
+    "id": 64,
+    "continent": "Asia",
+    "category": "Glaciers",
+    "name": "Siachen Glacier",
+    "coordinates": [35.5, 77.0],
+    "details": "The longest glacier in the Karakoram at 76 km, Siachen lies in a disputed India-Pakistan border region, making it the world’s highest battlefield. Its 1000 m thick ice feeds the Indus River, critical for regional water supply. The glacier supports unique high-altitude ecosystems, but military activity and waste threaten its pristine environment. Its strategic importance overshadows its role in climate studies, with melting rates increasing due to global warming.",
+    "metrics": {
+      "length_km": 76,
+      "thickness_m": 1000
+    }
+  },
+  {
+    "id": 65,
+    "continent": "North America",
+    "category": "Glaciers",
+    "name": "Hubbard Glacier",
+    "coordinates": [60.3, -139.0],
+    "details": "North America’s largest tidewater glacier at 122 km, Hubbard spans Alaska and Canada, flowing into Disenchantment Bay. Known for its advancing front, it periodically blocks Russell Fjord, creating temporary lakes. The glacier supports marine ecosystems and attracts cruise tourism. Named after explorer Gardiner Hubbard, its ice is a climate research source. Climate change accelerates its advance, impacting coastal ecosystems and navigation routes.",
+    "metrics": {
+      "length_km": 122,
+      "thickness_m": 400
+    }
+  },
+  {
+    "id": 66,
+    "continent": "South America",
+    "category": "Plateaus",
+    "name": "Altiplano",
+    "coordinates": [-16.0, -68.0],
+    "details": "The world’s second-highest plateau at 3750 m, the Altiplano spans 200000 km² across Bolivia, Peru, and Chile. Home to Lake Titicaca, it supports Andean cultures like the Aymara and Quechua, who farm quinoa and potatoes. Formed by Andean uplift, it hosts unique salt flats like Salar de Uyuni. Its high altitude creates extreme climates, and mining for lithium and silver impacts its environment, while climate change threatens water resources.",
+    "metrics": {
+      "area_km2": 200000,
+      "elevation_m": 3750
+    }
+  },
+  {
+    "id": 67,
+    "continent": "Africa",
+    "category": "Plateaus",
+    "name": "Ethiopian Highlands",
+    "coordinates": [9.0, 38.0],
+    "details": "Africa’s largest continuous plateau at 500000 km², the Ethiopian Highlands, averaging 2500 m, are known as the ‘Roof of Africa.’ Formed by volcanic activity, they support coffee farming, Ethiopia’s economic backbone, and unique species like the gelada baboon. The highlands are the source of the Blue Nile, vital for regional water supply. Ancient rock-hewn churches in Lalibela reflect its cultural heritage, though deforestation and soil erosion pose significant challenges.",
+    "metrics": {
+      "area_km2": 500000,
+      "elevation_m": 2500
+    }
+  },
+  {
+    "id": 68,
+    "continent": "North America",
+    "category": "Plateaus",
+    "name": "Colorado Plateau",
+    "coordinates": [37.0, -110.0],
+    "details": "Spanning 337000 km² across the USA, the Colorado Plateau is renowned for geological formations like the Grand Canyon, formed by erosion over millions of years. Sacred to Native American tribes like the Navajo, it hosts unique ecosystems with species like the California condor. The plateau supports tourism and uranium mining, but water scarcity and overgrazing threaten its fragile environment. Its colorful rock layers are a key site for geological research.",
+    "metrics": {
+      "area_km2": 337000,
+      "elevation_m": 1800
+    }
+  },
+  {
+    "id": 69,
+    "continent": "Australia",
+    "category": "Plateaus",
+    "name": "Western Plateau",
+    "coordinates": [-25.0, 130.0],
+    "details": "Australia’s largest plateau at 1.7 million km², the Western Plateau covers much of the continent’s arid interior, including the Great Western Woodlands. Formed over billions of years, it hosts ancient geological features and sacred sites for Indigenous groups like the Martu. The plateau supports mining for gold and iron ore, but its sparse vegetation and wildlife, like kangaroos, face threats from climate change and invasive species like feral camels.",
+    "metrics": {
+      "area_km2": 1700000,
+      "elevation_m": 500
+    }
+  },
+  {
+    "id": 70,
+    "continent": "Asia",
+    "category": "Plateaus",
+    "name": "Deccan Plateau",
+    "coordinates": [17.0, 77.0],
+    "details": "Spanning 700000 km² in India, the Deccan Plateau is a volcanic basalt plateau formed 60 million years ago. It supports agriculture, producing cotton, millet, and sugarcane, and is home to historic sites like the Ajanta and Ellora caves, UNESCO World Heritage sites. The plateau’s rivers, like the Godavari, are vital for irrigation. Urbanization and deforestation threaten its ecosystems, while its rich biodiversity includes the Indian tiger.",
+    "metrics": {
+      "area_km2": 700000,
+      "elevation_m": 600
+    }
+  },
+  {
+    "id": 71,
+    "continent": "Asia",
+    "category": "Deserts",
+    "name": "Arabian Desert",
+    "coordinates": [25.0, 45.0],
+    "details": "The world’s second-largest desert at 2.3 million km², the Arabian Desert spans the Arabian Peninsula, including Saudi Arabia and Yemen. Known for vast sand seas like the Rub’ al-Khali, it supports Bedouin nomads and is a global oil and gas hub. Its extreme climate, with temperatures up to 50°C, hosts unique species like the Arabian oryx. Ancient trade routes and archaeological sites dot the region, but desertification and overgrazing challenge its sustainability.",
+    "metrics": {
+      "area_km2": 2300000
+    }
+  },
+  {
+    "id": 72,
+    "continent": "South America",
+    "category": "Deserts",
+    "name": "Atacama Desert",
+    "coordinates": [-23.0, -69.0],
+    "details": "The world’s driest desert, spanning 105000 km² in Chile and Peru, the Atacama receives less than 1 mm of rain annually in some areas. Its barren landscape, resembling Mars, is used for NASA testing and astronomical observatories due to clear skies. Rich in copper and lithium, it supports global mining. Indigenous Atacameño people have adapted to its harsh conditions. Climate change and water extraction threaten its fragile ecosystems and salt flats.",
+    "metrics": {
+      "area_km2": 105000
+    }
+  },
+  {
+    "id": 73,
+    "continent": "Africa",
+    "category": "Deserts",
+    "name": "Kalahari Desert",
+    "coordinates": [-24.0, 21.0],
+    "details": "Spanning 900000 km² across Botswana, Namibia, and South Africa, the Kalahari is a semi-arid desert with grassy savannas. Home to the San people for over 20000 years, it supports unique wildlife like meerkats and springboks. The Okavango Delta lies within its boundaries, creating a stark contrast. The desert hosts diamond mining, but overgrazing and water scarcity, worsened by climate change, threaten its ecosystems and traditional lifestyles.",
+    "metrics": {
+      "area_km2": 900000
+    }
+  },
+  {
+    "id": 74,
+    "continent": "North America",
+    "category": "Deserts",
+    "name": "Mojave Desert",
+    "coordinates": [35.0, -115.0],
+    "details": "Spanning 124000 km² in the USA, the Mojave Desert includes Death Valley, North America’s lowest and hottest point at -86 m and 54°C. Known for Joshua trees and unique geology, it supports Native American tribes like the Mojave. The desert hosts solar energy projects and military bases. Its fragile ecosystem faces threats from urban expansion and off-road vehicles, while climate change exacerbates water scarcity, impacting species like the desert tortoise.",
+    "metrics": {
+      "area_km2": 124000
+    }
+  },
+  {
+    "id": 75,
+    "continent": "Asia",
+    "category": "Deserts",
+    "name": "Thar Desert",
+    "coordinates": [27.0, 71.0],
+    "details": "Spanning 200000 km² in India and Pakistan, the Thar Desert is known for its vibrant cultural festivals like the Pushkar Fair. It supports agriculture through irrigation canals, growing wheat and mustard. The desert’s dunes and fossil beds date back millions of years, and it hosts species like the blackbuck. Ancient forts like Jaisalmer highlight its historical trade routes. Desertification and population growth strain its water resources, challenging sustainable development.",
+    "metrics": {
+      "area_km2": 200000
+    }
+  },
+  {
+    "id": 76,
+    "continent": "Africa",
+    "category": "Deserts",
+    "name": "Sahara Desert",
+    "coordinates": [23.4162, 25.6628],
+    "details": "The world’s largest hot desert, spanning 9.2 million km² across 11 North African countries, the Sahara stretches from the Atlantic to the Red Sea. Its landscape includes towering sand dunes, rocky hamadas, and rare oases supporting date palms. Nomadic Tuareg and Berber tribes have thrived here for centuries, with ancient trade routes crossing the desert. Fossils and rock art reveal a once-fertile past. Modern challenges include desertification, water scarcity, and potential for vast solar energy projects.",
+    "metrics": {
+      "area_km2": 9200000
+    }
+  }
+]
