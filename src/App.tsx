@@ -6,7 +6,7 @@ import L from 'leaflet';
 import features from './data/features.json'; // Fallback to local JSON
 import continents from './data/continents.json';
 import { HiMenu, HiOutlineChevronDoubleLeft, HiOutlineChevronDoubleRight, HiOutlineX } from "react-icons/hi";
-import { IoSearch } from 'react-icons/io5';
+import { IoSearch, IoStatsChartSharp } from 'react-icons/io5';
 import { Select, Option } from "@material-tailwind/react";
 import type { SelectProps } from './components/ThemeSelect';
 import ThemeSelect from './components/ThemeSelect';
@@ -220,9 +220,9 @@ function App() {
 
         <div className={`${isSidebarOpen ? 'flex flex-col' : 'hidden'}`}>
           {/* Maps Filter */}
-          <div className="flex items-center gap-2 my-4 border-b ">
+          <div className="flex items-center gap-2 my-2 border-b py-2">
             <SiFreelancermap size={20} className='text-black'/>
-            <p className='text-gray-900 mb-2 text-lg '>Maps</p>
+            <p className='text-gray-900 text-lg mb-0'>Maps</p>
           </div>
           <ThemeSelect
               options={mapOptions}
@@ -233,9 +233,9 @@ function App() {
             />
 
           {/* Continent Filter */}
-          <div className="flex items-center gap-2 my-4 border-b ">
+          <div className="flex items-center gap-2 my-2 border-b py-2">
             <LuListFilter size={20} className='text-black'/>
-            <p className='text-gray-900 mb-2 text-lg '>Filter</p>
+            <p className='text-gray-900 text-lg mb-0'>Filter</p>
           </div>
           <ThemeSelect
               options={continentOptions}
@@ -265,19 +265,32 @@ function App() {
             ))}
           </div> */}
           {/* Feature Details */}
-          {selectedFeature && (
+          {/* {selectedFeature && (
             <div className="mt-6 p-4 bg-gray-800 rounded-lg">
               <h3 className="font-bold text-lg">{selectedFeature.name}</h3>
               <p className="text-sm text-gray-300">{selectedFeature.continent} - {selectedFeature.category}</p>
               <p className="text-sm">{selectedFeature.details}</p>
             </div>
-          )}
+          )} */}
+          {/* Stats */}
+          <div className="flex items-center gap-2 my-2 border-b py-2">
+            <IoStatsChartSharp size={20} className='text-black'/>
+            <p className='text-gray-900 text-lg '>Stats</p>
+          </div>
           {/* Statistics */}
-          <div className="mt-6 p-4 bg-gray-800 rounded-lg">
-            <h3 className="font-bold text-lg">Stats</h3>
-            <p className="text-sm">Features: {filteredFeatures.length}</p>
-            <p className="text-sm">Continents: {[...new Set(features.map(f => f.continent))].length}</p>
-            <p className="text-sm">Categories: {[...new Set(features.map(f => f.category))].length}</p>
+          <div className="grid grid-cols-3 text-center mt-2 text-gray-900 rounded-lg">
+            <div className="features">
+              <p className="text-md text-gray-600">Features</p>
+              <p className='text-3xl'>{filteredFeatures.length}</p>
+            </div>
+            <div className="continents border-r border-l">
+              <p className="text-md text-gray-600">Continents</p>
+              <p className='text-3xl'> {[...new Set(features.map(f => f.continent))].length}</p>
+            </div>
+            <div className="categories">
+              <p className="text-md text-gray-600">Categories</p>
+              <p className='text-3xl'> {[...new Set(features.map(f => f.category))].length}</p>
+            </div>
           </div>
         </div>    
       </div>
