@@ -1,8 +1,9 @@
 
 .sidebar{
-    min-height:86vh;
-    position:sticky;
-    top:70px;
+    min-height:calc(100vh - 72px);
+    height:100%;
+    /* position:sticky;
+    top:70px; */
 }
 
 .header{
