@@ -215,7 +215,7 @@ function App() {
 
       <div className="flex lg:flex-row gap-3 py-2 relative">
         {/* Sidebar */}
-        <div className={`sidebar sticky flex flex-col top-[72px] left-0 lg:flex-[30%] bg-white shadow shadow-gray-300 rounded-md bg-opacity-80 p-6 transition-all duration-300 ${isSidebarOpen ? 'lg:flex-[30%] w-fit' : 'lg:w-16'}`}>
+        <div className={`sidebar sticky flex flex-col top-[72px] left-0 lg:w-1/3 bg-white shadow shadow-gray-300 rounded-md bg-opacity-80 p-6 transition-all duration-300 ${isSidebarOpen ? 'lg:flex-[30%] w-fit' : 'lg:w-16'}`}>
         <div className="flex items-center justify-between lg:mb-4">
             <h2 className={`text-lg font-semibold text-black ${isSidebarOpen ? 'block' : 'hidden'}`}>
               Explore the World
@@ -350,7 +350,7 @@ function App() {
                       html: `<div style="background-color: ${(categoryStyles as Record<string, { color: string }>)[feature.category]?.color || '#000'}; width: 16px; height: 16px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 8px ${(categoryStyles as Record<string, { color: string }>)[feature.category]?.color || '#000'};"></div>`,
                     })}
                     eventHandlers={{
-                      click: () => setSelectedFeature(feature as any),
+                      // click: () => setSelectedFeature(feature as any),
                       mouseover: (e) => e.target.openPopup(),
                       mouseout: (e) => e.target.closePopup(),
                     }}

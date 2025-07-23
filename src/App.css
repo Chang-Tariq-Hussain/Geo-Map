@@ -2,7 +2,6 @@
 .sidebar{
     height:100%;
     z-index:10;
-    overflow:scroll;
     min-height:calc(100vh - 80px);
     /* position:sticky;
     top:70px; */
