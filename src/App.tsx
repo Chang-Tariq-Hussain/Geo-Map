@@ -5,21 +5,21 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import features from './data/features.json'; // Fallback to local JSON
 import continents from './data/continents.json';
-import { HiMenu, HiOutlineChevronDoubleLeft, HiOutlineChevronDoubleRight, HiOutlineX } from "react-icons/hi";
+import { HiOutlineChevronDoubleLeft, HiOutlineChevronDoubleRight } from "react-icons/hi";
 import { IoSearch, IoStatsChartSharp } from 'react-icons/io5';
-import { Select, Option } from "@material-tailwind/react";
 import type { SelectProps } from './components/ThemeSelect';
 import ThemeSelect from './components/ThemeSelect';
 import { LuListFilter } from "react-icons/lu";
 import logoImage from '../public/logo2.avif';
 import { SiFreelancermap } from 'react-icons/si';
-import './App.css'
+import './App.css';
 // Fix Leaflet marker icons
-delete L.Icon.Default.prototype._getIconUrl;
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+  iconRetinaUrl: new URL('leaflet/dist/images/marker-icon-2x.png', import.meta.url).href,
+  iconUrl: new URL('leaflet/dist/images/marker-icon.png', import.meta.url).href,
+  shadowUrl: new URL('leaflet/dist/images/marker-shadow.png', import.meta.url).href,
 });
 
 // Category-specific marker colors
@@ -42,7 +42,10 @@ function MapUpdater({ selectedContinent}:{selectedContinent: string}) {
 
   useEffect(() => {
     const bounds = zoomToContinent(selectedContinent);
-    map.fitBounds(bounds, { padding: [50, 50] });
+    // Ensure bounds is in the correct format for fitBounds
+    // Leaflet expects LatLngBoundsExpression: LatLngBounds | LatLngTuple[] | LatLngTuple
+    // If bounds is number[][], cast as [number, number][]
+    map.fitBounds(bounds as [number, number][], { padding: [50, 50] });
   }, [selectedContinent, map]);
 
   return null;
@@ -89,7 +92,7 @@ function App() {
   const [selectedContinent, setSelectedContinent] = useState(() => localStorage.getItem('continent') || 'All');
   const [searchQuery, setSearchQuery] = useState('');
   const [isMounted, setIsMounted] = useState(false);
-  const [tileError, setTileError] = useState(null);
+  const [tileError, setTileError] = useState<String>("");
   const [selectedFeature, setSelectedFeature] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   // const [features, setFeatures] = useState([]); // Uncomment for JSONBin.io
@@ -118,7 +121,7 @@ function App() {
   }, [selectedCategory, selectedContinent, selectedMap]);
 
   // Handle tile loading errors
-  const handleTileError = (error) => {
+  const handleTileError = (error:unknown) => {
     console.error('Tile loading error:', error);
     setTileError('Failed to load map tiles. Check your internet connection.');
   };
@@ -153,7 +156,7 @@ function App() {
     : [];
 
   // Zoom to continent
-  const zoomToContinent = (continent) => {
+  const zoomToContinent = (continent: string) => {
     const bounds = {
       Asia: [[0, 40], [60, 180]],
       Africa: [[-40, -20], [40, 60]],
@@ -162,11 +165,12 @@ function App() {
       Antarctica: [[-90, -180], [-60, 180]],
       Europe: [[35, -10], [70, 60]],
       Australia: [[-50, 110], [-10, 160]],
-    };
-    return bounds[continent] || [[-90, -180], [90, 180]];
+    } as const;
+    if ((continent as keyof typeof bounds) in bounds) {
+      return bounds[continent as keyof typeof bounds];
+    }
+    return [[-90, -180], [90, 180]];
   };
-
-
 
 
   return (
@@ -318,7 +322,7 @@ function App() {
               style={{ height: '100%', width: '100%', zIndex:0 }}
               className="rounded-xl"
               zoomControl={false}
-              bounds={selectedContinent !== 'All' ? zoomToContinent(selectedContinent) : undefined}
+              bounds={selectedContinent !== 'All' ? (zoomToContinent(selectedContinent) as [number, number][]) : undefined}
             >
               <TileLayer
                 url={`https://api.maptiler.com/maps/${selectedMap}/{z}/{x}/{y}.png?key=8kVRKh6zOwdP96UzpEYg`}
@@ -327,9 +331,9 @@ function App() {
               />
               <ZoomControl position="topright" />
               <GeoJSON
-                data={continents}
+                data={continents as GeoJSON.FeatureCollection}
                 style={(feature) => ({
-                  fillColor: feature.properties.color,
+                  fillColor: feature?.properties?.color ?? '#ccc',
                   fillOpacity: 0.4,
                   weight: 2,
                   color: '#fff',
@@ -340,13 +344,13 @@ function App() {
                 {filteredFeatures.map(feature => (
                   <Marker
                     key={feature.id}
-                    position={feature.coordinates}
+                    position={feature.coordinates as [number, number]}
                     icon={L.divIcon({
                       className: 'custom-icon animate-pulse',
-                      html: `<div style="background-color: ${categoryStyles[feature.category]?.color || '#000'}; width: 16px; height: 16px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 8px ${categoryStyles[feature.category]?.color || '#000'};"></div>`,
+                      html: `<div style="background-color: ${(categoryStyles as Record<string, { color: string }>)[feature.category]?.color || '#000'}; width: 16px; height: 16px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 8px ${(categoryStyles as Record<string, { color: string }>)[feature.category]?.color || '#000'};"></div>`,
                     })}
                     eventHandlers={{
-                      click: () => setSelectedFeature(feature),
+                      click: () => setSelectedFeature(feature as any),
                       mouseover: (e) => e.target.openPopup(),
                       mouseout: (e) => e.target.closePopup(),
                     }}
@@ -370,7 +374,7 @@ function App() {
 }
 
 // Zoom to continent bounds
-function zoomToContinent(continent) {
+function zoomToContinent(continent: string) {
   const bounds = {
     Asia: [[0, 40], [60, 180]],
     Africa: [[-40, -20], [40, 60]],
@@ -380,7 +384,7 @@ function zoomToContinent(continent) {
     Europe: [[35, -10], [70, 60]],
     Australia: [[-50, 110], [-10, 160]],
   };
-  return bounds[continent] || [[-90, -180], [90, 180]];
+  return bounds[continent as keyof typeof bounds] || [[-90, -180], [90, 180]];
 }
 
 export default App;
