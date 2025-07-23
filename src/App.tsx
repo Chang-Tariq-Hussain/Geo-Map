@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, GeoJSON, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, GeoJSON, useMap, ZoomControl } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -97,6 +97,7 @@ function App() {
   // Client-side rendering and data fetch
   useEffect(() => {
     setIsMounted(true);
+  
     // Optional: Fetch from JSONBin.io
     // fetch('https://api.jsonbin.io/v3/b/<BIN_ID>', {
     //   headers: { 'X-Master-Key': '<YOUR_API_KEY>' }
@@ -111,6 +112,9 @@ function App() {
     localStorage.setItem('category', selectedCategory);
     localStorage.setItem('continent', selectedContinent);
     localStorage.setItem('map', selectedMap);
+    if(window.innerWidth < 990){
+      setIsSidebarOpen(false);
+    }
   }, [selectedCategory, selectedContinent, selectedMap]);
 
   // Handle tile loading errors
@@ -168,11 +172,13 @@ function App() {
   return (
     <div className="min-h-screen w-[100vw] bg-gray-100 text-white font-sans">
       {/* Header */}
-      <header className="header bg-white text-black bg-opacity-90 px-5 py-2 flex items-center gap-2 shadow-lg">
+      <header className="header flex flex-col sm:flex-row bg-white text-black bg-opacity-90 px-5 py-2 flex items-center gap-2 shadow-lg">
+        <div className="logo flex items-center gap-2">
         <img src={logoImage} alt="" className='h-12 object-contain'/>
         <h1 className="text-xl font-md">SnapMap</h1>
+        </div>
         {/* Search Bar */}
-        <div className="relative w-[40%] mx-auto">
+        <div className="relative w-[30rem] max-w-full mx-auto">
             <input
               type="text"
               className="w-full py-2 px-4 bg-gray-200 text-gray-800 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:bg-white focus:ring-gray-900 transition-all duration-200"
@@ -203,9 +209,9 @@ function App() {
         </button> */}
       </header> 
 
-      <div className="flex flex-col lg:flex-row gap-3 py-2">
+      <div className="flex lg:flex-row gap-3 py-2 relative">
         {/* Sidebar */}
-        <div className={`sidebar sticky top-[72px] left-0 lg:w-1/4 bg-white shadow shadow-gray-300 rounded-md bg-opacity-80 p-6 transition-all duration-300 ${isSidebarOpen ? 'lg:w-1/4 w-fit' : 'lg:w-16'}`}>
+        <div className={`sidebar sticky flex flex-col top-[72px] left-0 lg:flex-[30%] bg-white shadow shadow-gray-300 rounded-md bg-opacity-80 p-6 transition-all duration-300 ${isSidebarOpen ? 'lg:flex-[30%] w-fit' : 'lg:w-16'}`}>
         <div className="flex items-center justify-between lg:mb-4">
             <h2 className={`text-lg font-semibold text-black ${isSidebarOpen ? 'block' : 'hidden'}`}>
               Explore the World
@@ -279,7 +285,7 @@ function App() {
             <p className='text-gray-900 text-lg '>Stats</p>
           </div>
           {/* Statistics */}
-          <div className="grid grid-cols-3 text-center mt-2 text-gray-900 rounded-lg">
+          <div className="grid grid-cols-3 gap-4 text-center mt-2 text-gray-900 rounded-lg">
             <div className="features">
               <p className="text-md text-gray-600">Features</p>
               <p className='text-3xl'>{filteredFeatures.length}</p>
@@ -297,7 +303,9 @@ function App() {
       </div>
 
         {/* Map Container */}
-        <div className="flex-1 lg:w-3/4 h-[700px] bg-gray-800 rounded-xl shadow-2xl relative">
+        <div className="w-full overflow-auto">
+
+        <div className="flex lg:w-[90%] h-[calc(100vh-100px)] min-h-[400px] bg-gray-800 rounded-xl shadow-2xl relative">
           {tileError && (
             <div className="absolute top-4 left-4 p-4 bg-red-600 text-white rounded-lg z-[1000]">
               {tileError}
@@ -309,6 +317,7 @@ function App() {
               zoom={2}
               style={{ height: '100%', width: '100%', zIndex:0 }}
               className="rounded-xl"
+              zoomControl={false}
               bounds={selectedContinent !== 'All' ? zoomToContinent(selectedContinent) : undefined}
             >
               <TileLayer
@@ -316,6 +325,7 @@ function App() {
                 // attribution='© <a href="https://www.maptiler.com/copyright/">MapTiler</a> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 eventHandlers={{ tileerror: handleTileError }}
               />
+              <ZoomControl position="topright" />
               <GeoJSON
                 data={continents}
                 style={(feature) => ({
@@ -352,6 +362,7 @@ function App() {
               <MapUpdater selectedContinent={selectedContinent} />
             </MapContainer>
           )}
+        </div>
         </div>
       </div>
     </div>

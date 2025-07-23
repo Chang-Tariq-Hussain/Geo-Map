@@ -1,7 +1,9 @@
 
 .sidebar{
-    min-height:calc(100vh - 72px);
     height:100%;
+    z-index:10;
+    overflow:scroll;
+    min-height:calc(100vh - 80px);
     /* position:sticky;
     top:70px; */
 }
@@ -10,4 +12,15 @@
     position:sticky;
     top:0;
     z-index:10;
+}
+
+@media(max-width:990px){
+    header{
+        position:relative;
+        top:12px;
+    }
+    .sidebar{
+        position:absolute;
+        top:10px;
+    }
 }
