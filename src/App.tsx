@@ -93,7 +93,6 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isMounted, setIsMounted] = useState(false);
   const [tileError, setTileError] = useState<String>("");
-  const [selectedFeature, setSelectedFeature] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   // const [features, setFeatures] = useState([]); // Uncomment for JSONBin.io
 
