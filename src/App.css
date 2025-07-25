@@ -20,6 +20,16 @@
     }
     .sidebar{
         position:absolute;
-        top:10px;
+        top:8px;
     }
+}
+
+@media (max-width:640px){
+    
+    .sidebar{
+        min-height:calc(100vh - 112px);
+        top:8px;
+        left:0;
+    }
+
 }

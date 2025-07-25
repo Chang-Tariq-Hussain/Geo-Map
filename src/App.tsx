@@ -214,7 +214,7 @@ function App() {
 
       <div className="flex lg:flex-row gap-3 py-2 relative">
         {/* Sidebar */}
-        <div className={`sidebar sticky flex flex-col top-[72px] left-0 lg:w-1/3 bg-white shadow shadow-gray-300 rounded-md bg-opacity-80 p-6 transition-all duration-300 ${isSidebarOpen ? 'lg:flex-[30%] w-fit' : 'lg:w-16'}`}>
+        <div className={`sidebar fixed h-[calc(100vh-155px)] md:h-[calc(100vh - 100px)]  md:sticky flex flex-col top-[72px] left-0 lg:w-1/3 bg-white shadow shadow-gray-300 rounded-md bg-opacity-80 p-6 transition-all duration-300 ${isSidebarOpen ? 'lg:flex-[30%] w-fit' : 'lg:w-16'}`}>
         <div className="flex items-center justify-between lg:mb-4">
             <h2 className={`text-lg font-semibold text-black ${isSidebarOpen ? 'block' : 'hidden'}`}>
               Explore the World
@@ -308,7 +308,7 @@ function App() {
         {/* Map Container */}
         <div className="w-full overflow-auto">
 
-        <div className="flex lg:w-[90%] h-[calc(100vh-100px)] min-h-[400px] bg-gray-800 rounded-xl shadow-2xl relative">
+        <div className="flex lg:w-[90%] h-[calc(100vh-155px)] md:h-[calc(100vh - 100px)] min-h-[400px] bg-gray-800 rounded-xl shadow-2xl relative">
           {tileError && (
             <div className="absolute top-4 left-4 p-4 bg-red-600 text-white rounded-lg z-[1000]">
               {tileError}
